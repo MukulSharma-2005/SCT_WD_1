@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpiceCraft Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="task_01.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="logo">Spice<span>Craft</span></div>
+
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#chefs">Chefs</a></li>
+      <li><a href="#pricing">Reservations</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <p class="hero-tag">✦ Pure vegetarian. Authentic flavours. Unforgettable evenings.</p>
+    <h1>Taste the<br/><span>Tradition.</span></h1>
+    <p class="hero-desc">
+      SpiceCraft brings you hand-crafted vegetarian dishes rooted in generations-old recipes,
+      reimagined for the modern palate. Every plate tells a story.
+    </p>
+    <div class="hero-buttons">
+      <a href="#menu" class="btn">Explore Menu</a>
+      <a href="#pricing" class="btn btn-outline">Book a Table</a>
+    </div>
+    <div class="scroll-hint">↓ scroll</div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="about">
+      <div class="about-text">
+        <p class="section-tag">Our Story</p>
+        <h2 class="section-title">Why SpiceCraft?</h2>
+        <p>Founded in 2016, SpiceCraft started as a small family kitchen with one simple idea — great vegetarian food should feel like home. Today we serve hundreds of guests each week, but the heart of every dish remains the same.</p>
+        <p>Our chefs source fresh, local ingredients daily and blend spices using recipes passed down through three generations. No shortcuts, no pre-made sauces. Just honest vegetarian cooking done right.</p>
+        <a href="#menu" class="btn" style="margin-top: 20px;">See Our Menu</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <h3>12K+</h3>
+          <p>Happy Guests</p>
+        </div>
+        <div class="stat">
+          <h3>60+</h3>
+          <p>Veg Dishes</p>
+        </div>
+        <div class="stat">
+          <h3>9</h3>
+          <p>Years of Craft</p>
+        </div>
+        <div class="stat">
+          <h3>4.9★</h3>
+          <p>Avg. Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section id="menu" class="menu">
+    <p class="section-tag centered">What We Serve</p>
+    <h2 class="section-title centered">Our Vegetarian Menu</h2>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="showTab('starters', this)">Starters</button>
+      <button class="tab-btn" onclick="showTab('mains', this)">Main Course</button>
+      <button class="tab-btn" onclick="showTab('desserts', this)">Desserts</button>
+      <button class="tab-btn" onclick="showTab('drinks', this)">Drinks</button>
+    </div>
+
+    <!-- Starters — all veg -->
+    <div class="menu-grid" id="starters">
+      <div class="menu-card">
+        <div class="dish-icon">🥗</div>
+        <h3>Tandoori Paneer Salad</h3>
+        <p>Fresh greens, charred paneer, cherry tomatoes, and a mint-yoghurt dressing. Light yet satisfying.</p>
+        <div class="menu-footer">
+          <div class="price">₹220</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🧅</div>
+        <h3>Crispy Onion Bhaji</h3>
+        <p>Golden, spiced onion fritters with a coriander dipping sauce. The perfect way to start your meal.</p>
+        <div class="menu-footer">
+          <div class="price">₹160</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🫙</div>
+        <h3>Paneer Tikka Platter</h3>
+        <p>Soft paneer cubes marinated in spiced yoghurt and grilled in the tandoor. Served with green chutney.</p>
+        <div class="menu-footer">
+          <div class="price">₹280</div>
+          <span class="dish-tag">Bestseller</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🥔</div>
+        <h3>Aloo Tikki Chaat</h3>
+        <p>Crispy potato patties topped with tangy tamarind chutney, yoghurt, and sev. A street food classic.</p>
+        <div class="menu-footer">
+          <div class="price">₹150</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Course — all veg -->
+    <div class="menu-grid" id="mains" style="display:none;">
+      <div class="menu-card">
+        <div class="dish-icon">🫕</div>
+        <h3>Dal Makhani</h3>
+        <p>Black lentils simmered overnight with butter and cream. A vegetarian dish that never disappoints.</p>
+        <div class="menu-footer">
+          <div class="price">₹280</div>
+          <span class="dish-tag">Bestseller</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🍛</div>
+        <h3>Paneer Butter Masala</h3>
+        <p>Soft paneer in a rich, creamy tomato sauce. Our vegetarian answer to the classic — made fresh every hour.</p>
+        <div class="menu-footer">
+          <div class="price">₹360</div>
+          <span class="dish-tag">Bestseller</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🫓</div>
+        <h3>Garlic Naan Basket</h3>
+        <p>Freshly baked naan brushed with garlic butter and coriander. Comes with a trio of chutneys.</p>
+        <div class="menu-footer">
+          <div class="price">₹120</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🍚</div>
+        <h3>Veg Dum Biryani</h3>
+        <p>Slow-cooked dum biryani with fresh vegetables, saffron, and fried onions. Served in a sealed pot at the table.</p>
+        <div class="menu-footer">
+          <div class="price">₹420</div>
+          <span class="dish-tag">Chef's Pick</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🥬</div>
+        <h3>Palak Paneer</h3>
+        <p>Fresh spinach puree with soft paneer cubes, ginger, and garlic. A timeless North Indian favourite.</p>
+        <div class="menu-footer">
+          <div class="price">₹300</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🫘</div>
+        <h3>Chole Bhature</h3>
+        <p>Spiced chickpea curry served with fluffy deep-fried bhature. A hearty Punjabi classic done right.</p>
+        <div class="menu-footer">
+          <div class="price">₹240</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts — all veg -->
+    <div class="menu-grid" id="desserts" style="display:none;">
+      <div class="menu-card">
+        <div class="dish-icon">🍮</div>
+        <h3>Gulab Jamun</h3>
+        <p>Soft milk-solid dumplings soaked in rose-flavoured sugar syrup. Served warm with vanilla ice cream.</p>
+        <div class="menu-footer">
+          <div class="price">₹160</div>
+          <span class="dish-tag">Bestseller</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🍨</div>
+        <h3>Kulfi Trio</h3>
+        <p>Three scoops of house-made kulfi — pistachio, mango, and rose. Set in the traditional style.</p>
+        <div class="menu-footer">
+          <div class="price">₹200</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🎂</div>
+        <h3>Rasmalai Cake</h3>
+        <p>A fusion dessert — sponge soaked in rasmalai cream, topped with pistachios and saffron strands.</p>
+        <div class="menu-footer">
+          <div class="price">₹240</div>
+          <span class="dish-tag">Chef's Pick</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🍯</div>
+        <h3>Gajar Ka Halwa</h3>
+        <p>Slow-cooked carrot halwa with khoya, cardamom, and garnished with dry fruits. Served warm.</p>
+        <div class="menu-footer">
+          <div class="price">₹180</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drinks — all veg -->
+    <div class="menu-grid" id="drinks" style="display:none;">
+      <div class="menu-card">
+        <div class="dish-icon">🥛</div>
+        <h3>Mango Lassi</h3>
+        <p>Thick, chilled yoghurt blended with Alphonso mangoes and a pinch of cardamom. Refreshing and filling.</p>
+        <div class="menu-footer">
+          <div class="price">₹120</div>
+          <span class="dish-tag">Bestseller</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🌿</div>
+        <h3>Mint Shikanjvi</h3>
+        <p>House lemonade with crushed mint, black salt, and roasted cumin. Old Delhi recipe, nothing added.</p>
+        <div class="menu-footer">
+          <div class="price">₹90</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">☕</div>
+        <h3>Masala Chai</h3>
+        <p>Simmered tea with ginger, cardamom, cinnamon, and whole peppercorns. Served in a clay cup.</p>
+        <div class="menu-footer">
+          <div class="price">₹70</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="dish-icon">🥤</div>
+        <h3>Rose Sherbet</h3>
+        <p>Chilled rose-water drink with basil seeds and a squeeze of lime. Sweet, floral, and very refreshing.</p>
+        <div class="menu-footer">
+          <div class="price">₹100</div>
+          <span class="dish-tag">Vegetarian</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHEFS ===== -->
+  <section id="chefs" class="chefs">
+    <p class="section-tag centered">The Kitchen Team</p>
+    <h2 class="section-title centered">Meet the Chefs</h2>
+    <div class="chef-cards">
+
+      <div class="chef-card">
+        <span class="chef-avatar">👨‍🍳</span>
+        <h3>Rajan Kapoor</h3>
+        <p class="chef-role">Head Chef & Founder</p>
+        <p class="chef-bio">20 years in professional kitchens across Mumbai, Delhi and Dubai. Rajan's philosophy is simple — use the best ingredients, respect the recipe, and cook with love.</p>
+        <div class="chef-tags">
+          <span>Mughlai</span>
+          <span>Tandoor</span>
+          <span>Fusion</span>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <span class="chef-avatar">👩‍🍳</span>
+        <h3>Meera Nair</h3>
+        <p class="chef-role">South Indian Specialist</p>
+        <p class="chef-bio">A trained culinary artist from Kerala, Meera brings the coastal vegetarian flavours of South India to every dish she creates. Her Palak Paneer is legendary among regulars.</p>
+        <div class="chef-tags">
+          <span>Coastal</span>
+          <span>Vegetarian</span>
+          <span>Kerala</span>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <span class="chef-avatar">🧑‍🍳</span>
+        <h3>Arjun Bhatia</h3>
+        <p class="chef-role">Pastry & Desserts Chef</p>
+        <p class="chef-bio">Trained in Paris and Mumbai, Arjun blends classical pastry techniques with traditional Indian sweets. Every dessert he creates is a work of art and tastes like one too.</p>
+        <div class="chef-tags">
+          <span>Pastry</span>
+          <span>Mithai</span>
+          <span>Fusion</span>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <span class="chef-avatar">👨‍🍳</span>
+        <h3>Sameer Rao</h3>
+        <p class="chef-role">Tandoor & Grill Expert</p>
+        <p class="chef-bio">Sameer handles the live tandoor station with 12 years of experience. His paneer tikka and naans come out perfect every single time — crispy outside, tender inside.</p>
+        <div class="chef-tags">
+          <span>Paneer</span>
+          <span>Tandoor</span>
+          <span>Breads</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== RESERVATIONS / PRICING ===== -->
+  <section id="pricing" class="pricing">
+    <p class="section-tag centered">Dine With Us</p>
+    <h2 class="section-title centered">Reservation Packages</h2>
+    <div class="pricing-cards">
+
+      <div class="price-card">
+        <h3>Casual Dining</h3>
+        <div class="price-amount">₹799<span>/person</span></div>
+        <p class="price-desc">Walk-in or book a table, no occasion needed.</p>
+        <ul>
+          <li>✓ Full vegetarian menu access</li>
+          <li>✓ Complimentary welcome drink</li>
+          <li>✓ Table for 2–4 guests</li>
+          <li class="no">✗ Priority seating</li>
+          <li class="no">✗ Dessert platter</li>
+        </ul>
+        <a href="#contact" class="btn">Reserve Now</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="badge">Most Popular</div>
+        <h3>Chef's Table</h3>
+        <div class="price-amount">₹1,499<span>/person</span></div>
+        <p class="price-desc">A curated 5-course veg experience by Chef Rajan.</p>
+        <ul>
+          <li>✓ 5-course set menu</li>
+          <li>✓ Priority seating</li>
+          <li>✓ Welcome mocktail</li>
+          <li>✓ Dessert platter included</li>
+          <li class="no">✗ Private dining room</li>
+        </ul>
+        <a href="#contact" class="btn">Reserve Now</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Private Event</h3>
+        <div class="price-amount">₹2,999<span>/person</span></div>
+        <p class="price-desc">For birthdays, anniversaries, and celebrations.</p>
+        <ul>
+          <li>✓ Private dining room</li>
+          <li>✓ Custom 7-course veg menu</li>
+          <li>✓ Welcome mocktail & snacks</li>
+          <li>✓ Dessert + birthday cake</li>
+          <li>✓ Dedicated server</li>
+        </ul>
+        <a href="#contact" class="btn">Reserve Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="testimonials">
+    <p class="section-tag centered">Guest Reviews</p>
+    <h2 class="section-title centered">What People Say</h2>
+    <div class="testimonial-cards">
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="quote">"The Veg Dum Biryani was absolutely incredible. I've eaten biryani all over India and SpiceCraft's vegetarian version matches any of them. Will definitely be back."</p>
+        <div class="member">
+          <div class="member-avatar">👨</div>
+          <div>
+            <p class="member-name">Vikram Anand</p>
+            <p class="member-since">Regular guest since 2022</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="quote">"We booked the Private Event package for our anniversary. Chef Rajan personally came to our table. The food, the ambience, everything was magical."</p>
+        <div class="member">
+          <div class="member-avatar">👩</div>
+          <div>
+            <p class="member-name">Sneha & Rohan Gupta</p>
+            <p class="member-since">Anniversary dinner, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="quote">"Best Paneer Butter Masala I've ever had. The Dal Makhani was perfect too. As a vegetarian I always struggle to find good restaurants — SpiceCraft is now my go-to."</p>
+        <div class="member">
+          <div class="member-avatar">👨</div>
+          <div>
+            <p class="member-name">Deepak Malhotra</p>
+            <p class="member-since">Regular guest since 2021</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="faq">
+    <p class="section-tag centered">Got Questions?</p>
+    <h2 class="section-title centered">Frequently Asked</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq1" />
+        <label for="faq1" class="faq-question">Do you take walk-in guests? <span>+</span></label>
+        <p class="faq-answer">Yes! Walk-ins are always welcome. However, on Friday and Saturday evenings we recommend booking in advance as we fill up quickly. You can reserve a table through our contact form or call us directly.</p>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq2" />
+        <label for="faq2" class="faq-question">Is your entire menu vegetarian? <span>+</span></label>
+        <p class="faq-answer">Yes! SpiceCraft is a 100% pure vegetarian restaurant. Every single dish on our menu is vegetarian. We also have several vegan-friendly options — just ask your server and we will guide you through them.</p>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq3" />
+        <label for="faq3" class="faq-question">What are your opening hours? <span>+</span></label>
+        <p class="faq-answer">We are open Tuesday to Sunday, 12pm to 3:30pm (lunch) and 7pm to 11pm (dinner). We are closed on Mondays. On public holidays, please check our Instagram for updated timings.</p>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq4" />
+        <label for="faq4" class="faq-question">Can I customise the Private Event menu? <span>+</span></label>
+        <p class="faq-answer">Yes, absolutely. For Private Events we offer a full consultation with Chef Rajan to design a custom vegetarian menu around your preferences, dietary requirements, and the occasion. Just mention this when you contact us.</p>
+      </div>
+
+      <div class="faq-item">
+        <input type="checkbox" id="faq5" />
+        <label for="faq5" class="faq-question">Do you offer home delivery? <span>+</span></label>
+        <p class="faq-answer">We currently offer home delivery within a 10 km radius through our website and Zomato. Some dishes are dine-in only (like the sealed dum biryani) as they don't travel well, but most of the menu is available for delivery.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+
+      <div class="contact-text">
+        <p class="section-tag">Book a Table</p>
+        <h2 class="section-title">Reserve Your Spot</h2>
+        <p>Whether it's a casual dinner or a special occasion, we'd love to host you. Fill in the form and our team will confirm your booking within a few hours.</p>
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <span>📍</span>
+            <p>42 Spice Lane, Connaught Place, New Delhi</p>
+          </div>
+          <div class="contact-info-item">
+            <span>📞</span>
+            <p>+91 98765 43210</p>
+          </div>
+          <div class="contact-info-item">
+            <span>✉️</span>
+            <p>hello@spicecraft.in</p>
+          </div>
+          <div class="contact-info-item">
+            <span>🕐</span>
+            <p>Tue–Sun: 12pm–3:30pm & 7pm–11pm</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Rahul" />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Sharma" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="rahul@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="package">Package</label>
+            <select id="package">
+              <option value="">Select...</option>
+              <option>Casual Dining — ₹799/person</option>
+              <option>Chef's Table — ₹1499/person</option>
+              <option>Private Event — ₹2999/person</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guests">No. of Guests</label>
+            <select id="guests">
+              <option>1–2</option>
+              <option>3–4</option>
+              <option>5–8</option>
+              <option>9+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Special Requests</label>
+          <textarea id="message" rows="3" placeholder="Allergies, occasion, preferred seating..."></textarea>
+        </div>
+        <button class="btn" onclick="bookTable()" style="width:100%; border:none; cursor:pointer; font-family:'Lato',sans-serif;">Reserve Table →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="logo">Spice<span>Craft</span></div>
+        <p>Pure vegetarian flavours, honest cooking, unforgettable evenings. Serving Delhi since 2016.</p>
+        <div class="social-links">
+          <a href="#">IG</a>
+          <a href="#">FB</a>
+          <a href="#">YT</a>
+          <a href="#">ZO</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#about">About Us</a>
+        <a href="#menu">Menu</a>
+        <a href="#chefs">Our Chefs</a>
+        <a href="#pricing">Reservations</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Menu Sections</h4>
+        <a href="#menu">Starters</a>
+        <a href="#menu">Main Course</a>
+        <a href="#menu">Desserts</a>
+        <a href="#menu">Drinks</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p>Tue – Fri &nbsp; 12pm – 3:30pm</p>
+        <p>Tue – Fri &nbsp; 7pm – 11pm</p>
+        <p>Sat – Sun &nbsp; 12pm – 11pm</p>
+        <p class="hours-note">Closed on Mondays</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 SpiceCraft Restaurant. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      var nav = document.getElementById('navbar');
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Hamburger menu toggle
+    var hamburger = document.getElementById('hamburger');
+    var navLinks  = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    var links = navLinks.querySelectorAll('a');
+    links.forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Menu tab switcher
+    function showTab(tabId, clickedBtn) {
+      var grids = document.querySelectorAll('.menu-grid');
+      grids.forEach(function(g) { g.style.display = 'none'; });
+
+      var btns = document.querySelectorAll('.tab-btn');
+      btns.forEach(function(b) { b.classList.remove('active'); });
+
+      document.getElementById(tabId).style.display = 'grid';
+      clickedBtn.classList.add('active');
+    }
+
+    // Reservation form submit
+    function bookTable() {
+      var fname = document.getElementById('fname').value.trim();
+      var email = document.getElementById('email').value.trim();
+      if (!fname || !email) {
+        alert('Please fill in at least your name and email.');
+        return;
+      }
+      alert('Thank you, ' + fname + '! Your reservation request has been received. We will confirm your booking shortly via email.');
+    }
+
+  </script>
+
+</body>
+</html>
